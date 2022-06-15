@@ -1,106 +1,116 @@
-@media screen and (max-width: 750px) {   
+/*Tablette ipad Air*/
+@media screen and (max-width: 1000px) {   
+    h1 {
+        color: #120076;
+    }
+
+}
+/*Smartphone Iphone 8*/
+
+@media screen and (max-width: 500px) {   
     h1 {
         color: #760001;
     }
 
-    nav {
-        width: auto;
-        text-align: left;
-    }
-
-    nav ul {
-        flex-direction: row;
-    }
-
-    nav li {
-        padding-left: 4px;
-    }
-
-    nav a {
-        font-size: 1.1em;
-    }
-
-    nav a:hover {
-        border-bottom: 0;
-    }
 }
+
 
 body {
     font-family: 'Raleway';
     font-size: 15px;
-    margin: 0;
-    padding: 2em;
+    height: 480px;
+    width: 1280px;
+    margin: auto;   
+    padding: 0 2em 0 2em;/* Respectivement top pad, right pad, bottom pad, left pad */
 }
 
 
-header {
+header { /* Dans ce flex il y'a 2 boîtes*/
     display: flex;
     justify-content: space-between;
 }
 
-
-nav {
-    width: auto;
+header .logo {
+    padding: 1em 0px;
 }
 
-nav ul {
+header .logo img {
+    width: 150px;
+}
+
+header nav ul {
+    display: flex;
     list-style-type: none;
+    margin: 0;
+}
+
+header nav ul li {
+    padding: 2em 1em;
+    border-top: 2px solid transparent;/* Laisse une ligne transparent en haut de la boite afin de laisser transparaitre la ligne bleu*/
+    margin: 0 1em 0 1em;
+}
+
+header nav ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+header nav ul li:hover {
+    border-color: blue;
+}
+
+
+header nav ul li:hover a {
+    color: blue;
+}
+
+/* La partie Recherche de la page */
+
+.recherche{
     display: flex;
 }
 
-nav li {
-    margin-right: 15px;
-}
+/* La partie filtre de la page*/
 
-nav a {
-    font-size: 1.3em;
-    color: #181818;
-    padding-bottom: 3px;
-    text-decoration: none;
-    margin-right: 50px;
-}
-
-nav a:hover {
-    color: blue;
-    border-top: 1px solid blue;
+.filtre{
+    display: flex;
 }
 
 
+/*le bas de la page */
 
-
-
-h1 {
-    font-weight: bolder;
-}
-
-
-
-
-
-
-
-
-footer {
+footer { /* Dans le flex de ce footer je vais mettre 3 boîtes */
     display: flex;
     background-color: rgb(233, 233, 233);
     padding: 2em;
     margin: 0px -2em;
 }
 
-footer p,
-footer ul {
+footer .foot{
+    width: 33%;
+}
+
+footer .foot h1 {
+    font-size: 1.1em;
+    margin-right: 250px;
+}
+
+footer .foot ul {
+    display: flex;
+    flex-direction: column;
     font-size: 0.8em;
     list-style-type: none;
     padding: 0;
+    margin-top: 2em;
 }
 
-footer a {
+footer .foot ul li {
+    margin: 10px 0 10px 0;
+}
+
+footer .foot ul li a {
     font-size: 1.3em;
     color: #181818;
     text-decoration: none;
 }
 
-footer h1 {
-    font-size: 1.1em;
-    margin-right: 250px;
-}
