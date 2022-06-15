@@ -66,13 +66,25 @@ header nav ul li:hover a {
 
 /* La partie Recherche de la page */
 
-.recherche{
+#recherche{
     display: flex;
 }
 
 /* La partie filtre de la page*/
 
-.filtre{
+#filtre{
+    display: flex;
+}
+
+/* La partie hébergement de la page */
+
+#hebergement{
+    display: flex;
+}
+
+/* La partie activité de la page */
+
+#activité{
     display: flex;
 }
 
