@@ -18,12 +18,17 @@
 body {
     font-family: 'Raleway';
     font-size: 15px;
-    height: 480px;
-    width: 1280px;
+    height: auto;
+    width: 1024px;
     margin: auto;   
     padding: 0 2em 0 2em;/* Respectivement top pad, right pad, bottom pad, left pad */
 }
 
+h1{
+    font-family: 'Raleway', sans-serif;
+    font-size: large;
+    font-weight: bold;
+}
 
 header { /* Dans ce flex il y'a 2 boîtes*/
     display: flex;
@@ -64,37 +69,220 @@ header nav ul li:hover a {
     color: blue;
 }
 
-/* La partie Recherche de la page */
+/* La partie research de la page */
 
-#recherche{
+#research{
     display: flex;
-    border: 2px solid grey ;
-    border-radius: 10px;
+    border: 1px solid rgb(233, 233, 233) ;
+    border-radius: 20px;
     width: 300px;
-    height: 50px;
+    height: 40px;
 }
 
-#recherche button{
-    border-radius: 0 10px 10px 0;
+#research input
+{
     border: none;
 }
 
+#research button{
+    border-radius: 0 10px 10px 0;
+    border: none;
+    background-color: #4e90e6;
+}
+
+#research button p{
+    color: white;
+    font-weight: bold;
+    margin: 0;
+}
+
 #pin_icon_container{
+    display: flex;
     width: 50px;
-    background-color: grey;
-    border-radius: 4px 0 0 4px;
+    background-color: rgb(233, 233, 233);
+    border-radius: 10px 0 0 10px;
+    justify-content: center;
+    align-items: center;
 }
 
 /* La partie filtre de la page*/
 
-#filtre{
+#filter{
     display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin: 2em 0 2em 0;
+}
+
+#filter p{
+    font-weight: bold;
+    font-size: large;
+}
+
+#filter .category{
+    display: flex;
+    align-items: center;
+    border: 2px solid rgb(233, 233, 233) ;
+    border-radius: 600px;
+    padding-right: 20px;
+    margin-left: 20px;
+    width: auto;
+    height: 50px;
+}
+
+#filter .category .round {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+    background: rgb(42, 150, 238);
+}
+
+#filter .category p{
+    margin-left: 10px;
+}
+
+/* La partie info */
+
+#info{
+    display: flex;
+    align-items: center;
+    margin: 1em 0 1em 0;
+}
+
+#info .round{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgb(233, 233, 233) ;
+    border-radius: 600px;
+    height: 20px;
+    width: 20px;
+}
+
+#info .round i{
+    color: rgb(38, 123, 156);
+}
+
+#info p{
+    margin:0 10px 0 10px;
 }
 
 /* La partie hébergement de la page */
 
 #hebergement{
     display: flex;
+    justify-content: space-between;
+}
+
+#hebergement section h1 {
+    margin: 0;
+}
+
+
+#hebergement section .container{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(233, 233, 233);
+    padding: 2em;
+    margin: 1em 0 1em 0;
+    border-radius: 15px;
+    width: 600px;
+}
+
+.hebergement-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.container .hebergement-list .result{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 10px;
+    border: solid 2px white;
+    width: 175px;
+    height: 150px;
+    margin: 1em 0 1em 0;
+}
+
+.container .hebergement-list .result img {
+    border-radius: 10px 10px 0 0;
+    margin: 1px 0 5px 0;
+    height: 60%;
+}
+
+.container .hebergement-list .result p,.container .hebergement-list .result h1{
+    margin: 2px 0 2px 0;
+    padding-left: 10px;
+    font-size: 10px;
+}
+
+.container .hebergement-list .result .notation{
+    padding: 2px 0 0 8px;
+}
+
+.container .hebergement-list .result .notation i{
+}
+
+.container .hebergement-list .result:nth-child(1), .container .hebergement-list .result:nth-child(4){
+    margin-left: 0;
+}
+
+.container .hebergement-list .result:nth-child(3), .container .hebergement-list .result:nth-child(6){
+    margin-right: 0;
+}
+
+#populaire{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: baseline;
+    background-color: rgb(233, 233, 233);
+    padding: 2em;
+    margin: 1em 0 1em 2em;
+    border-radius: 15px;
+    width: 25%;
+}
+
+#populaire h1{
+    margin: 0;
+}
+
+#populaire .hebergement-list .result{
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    border-radius: 10px;
+    border: solid 2px white;
+    width: 275px;
+    height: 100px;
+    margin: 1em 0 1em 0;
+}
+
+#populaire .hebergement-list .result img {
+    border-radius: 10px 0 0 10px;
+    margin: 1px 0 5px 0;
+    height: 100%;
+}
+
+#populaire .hebergement-list .result p,#populaire .hebergement-list .result h1{
+    margin: 2px 0 2px 0;
+    padding-left: 10px;
+    font-size: 10px;
+}
+
+#populaire .hebergement-list .result .info{
+    display: flex;
+    flex-direction: column;
+}
+
+#populaire .hebergement-list .result .info .notation{
+    padding: 2px 0 0 8px;
 }
 
 /* La partie activité de la page */
