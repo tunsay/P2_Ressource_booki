@@ -74,9 +74,9 @@ header nav ul li:hover a {
 #research{
     display: flex;
     border: 1px solid rgb(233, 233, 233) ;
-    border-radius: 20px;
+    border-radius: 10px;
     width: 300px;
-    height: 40px;
+    height: 50px;
 }
 
 #research input
@@ -136,7 +136,7 @@ header nav ul li:hover a {
     align-items: center;
     width: 50px;
     height: 50px;
-    border-radius: 30px;
+    border-radius: 100%;
     background: rgb(42, 150, 238);
 }
 
@@ -181,8 +181,12 @@ header nav ul li:hover a {
     margin: 0;
 }
 
+#hebergement section .notation{
+    color: blue;
+}
 
-#hebergement section .container{
+
+#hebergement section #marseille_container{
     display: flex;
     flex-direction: column;
     background-color: rgb(233, 233, 233);
@@ -198,7 +202,7 @@ header nav ul li:hover a {
     justify-content: space-between;
 }
 
-.container .hebergement-list .result{
+#marseille_container .hebergement-list .result{
     display: flex;
     flex-direction: column;
     background-color: white;
@@ -209,36 +213,32 @@ header nav ul li:hover a {
     margin: 1em 0 1em 0;
 }
 
-.container .hebergement-list .result img {
+#marseille_container .hebergement-list .result img {
     border-radius: 10px 10px 0 0;
-    margin: 1px 0 5px 0;
+    margin: 0 0 5px 0;
     height: 60%;
 }
 
-.container .hebergement-list .result p,.container .hebergement-list .result h1{
+#marseille_container .hebergement-list .result p,#marseille_container .hebergement-list .result h1{
     margin: 2px 0 2px 0;
     padding-left: 10px;
     font-size: 10px;
 }
 
-.container .hebergement-list .result .notation{
+#marseille_container .hebergement-list .result .notation{
     padding: 2px 0 0 8px;
 }
 
-.container .hebergement-list .result .notation i{
-}
-
-.container .hebergement-list .result:nth-child(1), .container .hebergement-list .result:nth-child(4){
+#marseille_container .hebergement-list .result:nth-child(1), #marseille_container .hebergement-list .result:nth-child(4){
     margin-left: 0;
 }
 
-.container .hebergement-list .result:nth-child(3), .container .hebergement-list .result:nth-child(6){
+#marseille_container .hebergement-list .result:nth-child(3), #marseille_container .hebergement-list .result:nth-child(6){
     margin-right: 0;
 }
 
-#populaire{
+#populaire_container{
     display: flex;
-    flex: 1;
     flex-direction: column;
     flex-wrap: wrap;
     align-items: baseline;
@@ -246,14 +246,9 @@ header nav ul li:hover a {
     padding: 2em;
     margin: 1em 0 1em 2em;
     border-radius: 15px;
-    width: 25%;
 }
 
-#populaire h1{
-    margin: 0;
-}
-
-#populaire .hebergement-list .result{
+#populaire_container .hebergement-list .result{
     display: flex;
     flex-direction: row;
     background-color: white;
@@ -264,31 +259,78 @@ header nav ul li:hover a {
     margin: 1em 0 1em 0;
 }
 
-#populaire .hebergement-list .result img {
+#populaire_container .hebergement-list .result img {
     border-radius: 10px 0 0 10px;
-    margin: 1px 0 5px 0;
+    margin: 0 0 5px 0;
     height: 100%;
 }
 
-#populaire .hebergement-list .result p,#populaire .hebergement-list .result h1{
+#populaire_container .hebergement-list .result p,#populaire_container .hebergement-list .result h1{
     margin: 2px 0 2px 0;
     padding-left: 10px;
     font-size: 10px;
 }
 
-#populaire .hebergement-list .result .info{
+#populaire_container .hebergement-list .result .info{
     display: flex;
     flex-direction: column;
 }
 
-#populaire .hebergement-list .result .info .notation{
-    padding: 2px 0 0 8px;
+#populaire_container .hebergement-list .result .info .notation{
+    padding: 50px 0 0px 8px;
 }
 
 /* La partie activité de la page */
 
-#activité{
+#activite{
     display: flex;
+  height: 475px;
+}
+
+#activite .container{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 1em 0 1em 0;
+    border-radius: 15px;
+}
+
+#activite .container h1{
+    margin: 25px 0 5px 0;
+}
+
+#activite .container .list{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 75%;
+    width: 200px;
+
+}
+
+#activite .container .list .box{
+    border-radius: 10px;
+    height: 100%;
+    margin: 1em 1em 0 0;
+    box-shadow: 1px 1px 1px 1px black;
+}
+
+#activite .container .list .box:nth-child(2){
+}
+
+#activite .container .list .box:nth-child(3){
+}
+
+#activite .container .list .box:nth-child(5){
+}
+
+#activite .container .list .box:nth-child(6){
+}
+
+#activite .container .list .box img{
+    border-radius: 10px 10px 0 0;
+    margin: 0 0 5px 0;
+    height: 80%;
 }
 
 
@@ -298,7 +340,7 @@ footer { /* Dans le flex de ce footer je vais mettre 3 boîtes */
     display: flex;
     background-color: rgb(233, 233, 233);
     padding: 2em;
-    margin: 0px -2em;
+    margin: 2em -2em;
 }
 
 footer .foot{
