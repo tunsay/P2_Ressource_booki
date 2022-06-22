@@ -1,32 +1,4 @@
-/*Tablette ipad Air*/
-@media screen and (max-width: 1000px) {   
-    h1 {
-        color: #120076;
-    }
-
-}
-/*Smartphone Iphone 8 test*/
-
-@media screen and (max-width: 500px) {   
-    h1 {
-        color: #760001;
-    }
-
-    header{
-        flex-direction: column;
-    }
-
-    #filter{
-        flex-direction: column;
-    }
-
-    #hebergement{
-        flex-direction: column;
-    }
-
-}
-
-:root{
+:root {
     --blue: RGB(24, 100, 252);
     --grey: RGB(242, 242, 242);
     --white-blue: RGB(224, 236, 255);
@@ -36,32 +8,42 @@ body {
     font-family: 'Raleway';
     font-size: 15px;
     height: auto;
-    margin: auto;   
-    padding: 0 2em 0 2em;/* Respectivement top pad, right pad, bottom pad, left pad */
+    margin: auto;
+    padding: 0 2em 0 2em;
+    /* Respectivement top pad, right pad, bottom pad, left pad */
 }
 
-h1{
+h1 {
     font-size: large;
     font-weight: bold;
 }
 
-.blue{
-    color:var(--blue);
+.blue {
+    color: var(--blue);
 }
 
-.white-blue{
-    color:var(--white-blue);
+.white-blue {
+    color: var(--white-blue);
 }
 
-.grey{
+.grey {
     color: var(--grey);
 }
 
-.box-shadow{
-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+.card {
+    background-color: white;
+    border-radius: 10px;
+    border: solid 3px white;
+    margin: 1em 0 1em 0;
 }
 
-header { /* Dans ce flex il y'a 2 boîtes*/
+.box-shadow {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+
+header {
+    /* Dans ce flex il y'a 2 boîtes*/
     display: flex;
     justify-content: space-between;
 }
@@ -82,7 +64,8 @@ header nav ul {
 
 header nav ul li {
     padding: 2em 1em;
-    border-top: 2px solid transparent;/* Laisse une ligne transparent en haut de la boite afin de laisser transparaitre la ligne bleu*/
+    border-top: 2px solid transparent;
+    /* Laisse une ligne transparent en haut de la boite afin de laisser transparaitre la ligne bleu*/
     margin: 0 1em 0 1em;
 }
 
@@ -102,32 +85,31 @@ header nav ul li:hover a {
 
 /* La partie research de la page */
 
-#research{
+#research {
     display: flex;
-    border: 1px solid var(--grey) ;
+    border: 1px solid var(--grey);
     border-radius: 10px;
     width: 300px;
     height: 50px;
 }
 
-#research input
-{
+#research input {
     border: none;
 }
 
-#research button{
+#research button {
     border-radius: 0 10px 10px 0;
     border: none;
     background-color: var(--blue);
 }
 
-#research button p{
+#research button p {
     color: white;
     font-weight: bold;
     margin: 0;
 }
 
-#pin_icon_container{
+#pin_icon_container {
     display: flex;
     width: 50px;
     background-color: var(--grey);
@@ -138,19 +120,19 @@ header nav ul li:hover a {
 
 /* La partie filtre de la page*/
 
-#filter{
+#filter {
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
     margin: 2em 0 2em 0;
 }
 
-#filter p{
+#filter p {
     font-weight: bold;
     font-size: large;
 }
 
-#filter .category{
+#filter .category {
     display: flex;
     align-items: center;
     border: 2px solid var(--grey);
@@ -171,58 +153,58 @@ header nav ul li:hover a {
     background: var(--white-blue);
 }
 
-#filter .category p{
+#filter .category p {
     margin-left: 10px;
 }
 
 /* La partie info */
 
-#info{
+#info {
     display: flex;
     align-items: center;
     margin: 1em 0 1em 0;
 }
 
-#info .round{
+#info .round {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid var(--grey) ;
+    border: 1px solid var(--grey);
     border-radius: 600px;
     height: 20px;
     width: 20px;
 }
 
-#info .round i{
+#info .round i {
     color: rgb(38, 123, 156);
 }
 
-#info p{
-    margin:0 10px 0 10px;
+#info p {
+    margin: 0 10px 0 10px;
 }
 
 /* La partie hébergement de la page */
 
 
-#hebergement{
+#hebergement {
     display: flex;
     justify-content: space-between;
 }
 
 #hebergement section h1 {
-    margin: 0;
+    margin-top: 1em;
 }
 
-.marseille{
+.marseille {
     width: 100%;
 }
 
-.populaires{
+.populaires {
     width: 45%;
 }
 
 
-#hebergement section #marseille_container{
+#hebergement section #marseille_container {
     display: flex;
     flex-direction: column;
     background-color: var(--grey);
@@ -231,27 +213,24 @@ header nav ul li:hover a {
     border-radius: 15px;
 }
 
-.hebergement-list{
+.hebergement-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
-.hebergement-list .result p, .hebergement-list .result h1{
+.hebergement-list .result p,
+.hebergement-list .result h1 {
     margin: 2px 0 2px 0;
     padding-left: 10px;
     font-size: 16px;
 }
 
-#marseille_container .hebergement-list .result{
+#marseille_container .hebergement-list .result {
     display: flex;
     flex-direction: column;
-    background-color: white;
-    border-radius: 10px;
-    border: solid 2px white;
     width: 30%;
     height: 250px;
-    margin: 1em 0 1em 0;
 }
 
 #marseille_container .hebergement-list .result img {
@@ -260,25 +239,28 @@ header nav ul li:hover a {
     height: 60%;
 }
 
-.hebergement-list .result p, .hebergement-list .result h1{
+.hebergement-list .result p,
+.hebergement-list .result h1 {
     margin: 2px 0 2px 0;
     padding-left: 10px;
     font-size: 16px;
 }
 
-#marseille_container .hebergement-list .result .notation{
+#marseille_container .hebergement-list .result .notation {
     padding: 2px 0 0 8px;
 }
 
-#marseille_container .hebergement-list .result:nth-child(1), #marseille_container .hebergement-list .result:nth-child(4){
+#marseille_container .hebergement-list .result:nth-child(1),
+#marseille_container .hebergement-list .result:nth-child(4) {
     margin-left: 0;
 }
 
-#marseille_container .hebergement-list .result:nth-child(3), #marseille_container .hebergement-list .result:nth-child(6){
+#marseille_container .hebergement-list .result:nth-child(3),
+#marseille_container .hebergement-list .result:nth-child(6) {
     margin-right: 0;
 }
 
-#populaire_container{
+#populaire_container {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -290,7 +272,7 @@ header nav ul li:hover a {
     border-radius: 15px;
 }
 
-.title-icon{
+.title-icon {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -298,15 +280,11 @@ header nav ul li:hover a {
     width: 100%;
 }
 
-#populaire_container .hebergement-list .result{
+#populaire_container .hebergement-list .result {
     display: flex;
     flex-direction: row;
-    background-color: white;
-    border-radius: 10px;
-    border: solid 2px white;
     width: 100%;
     height: 150px;
-    margin: 1em 0 1em 0;
 }
 
 #populaire_container .hebergement-list .result img {
@@ -316,112 +294,192 @@ header nav ul li:hover a {
 }
 
 
-#populaire_container .hebergement-list .result .info{
+#populaire_container .hebergement-list .result .info {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 
-#populaire_container .hebergement-list .result .info .notation{
-    padding: 50px 0 0px 8px;
+#populaire_container .hebergement-list .result .info .notation {
+    padding: 0px 0 0px 8px;
 }
 
 /* La partie activité de la page */
 
-#activite{
+#activite {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     height: 500px;
     width: 100%;
+    margin-bottom: 100px;
 }
 
-#activite h1{
+#activite h1 {
     margin: 25px 0 5px 0;
 }
 
-#activite .box-main{
+#activite .box-main {
     border-radius: 20px;
     height: 100%;
     width: 100%;
     margin: 3em 3em 0 0;
 }
 
-#activite .box-2{
+#activite .box-2 {
     height: 55%;
 }
 
-#activite .box-3{
+#activite .box-3 {
     height: 36%;
 }
 
-#activite .box-4{
+#activite .box-4 {
     margin-left: 3em;
 }
 
-#activite .box-5{
+#activite .box-5 {
     height: 43%;
-    
+
 }
 
-#activite .box-6{
+#activite .box-6 {
     height: 48%;
     margin-top: 3em;
 }
 
-.column-double{
-    display:flex;
+.column-double {
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
     flex-wrap: nowrap;
     width: 100%;
 }
 
-#activite  .box-main img{
+#activite .box-main img {
     width: 100%;
     height: calc(100% - 55px);
     object-fit: cover;
     border-radius: 10px 10px 0px 0px;
 }
 
-#activite  .box-main p{
-    margin: 1em 0 0 1em ;
+#activite .box-main p {
+    margin: 1em 0 0 1em;
 }
 
 
 /*le bas de la page */
 
-footer { /* Dans le flex de ce footer je vais mettre 3 boîtes */
-    display: flex;
+footer {
     background-color: var(--grey);
-    padding: 2em;
-    margin: 5em -2em;
+    margin: 0px -50px;
+    padding: 50px;
+    display: flex;
 }
 
-footer .foot{
+footer .foot {
     width: 33%;
 }
 
-footer .foot h1 {
-    font-size: 1.1em;
-    margin-right: 250px;
-}
-
 footer .foot ul {
-    display: flex;
-    flex-direction: column;
-    font-size: 0.8em;
+    padding: 0px;
     list-style-type: none;
-    padding: 0;
-    margin-top: 2em;
-}
-
-footer .foot ul li {
-    margin: 10px 0 10px 0;
 }
 
 footer .foot ul li a {
-    font-size: 1.3em;
-    color: #181818;
+    color: black;
     text-decoration: none;
+    line-height: 30px;
 }
 
+/*Tablette ipad Air*/
+@media screen and (max-width: 1000px) {
+    h1 {
+        color: #120076;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+
+}
+
+/*Smartphone Iphone 8 test*/
+
+@media screen and (max-width: 500px) {
+    body {
+        padding: 0 1em 0 1em;
+    }
+
+    h1 {
+        color: #760001;
+    }
+
+    ul {
+        margin: 0px -20px;
+        padding: 0;
+        justify-content: space-between;
+    }
+
+    header {
+        flex-direction: column;
+    }
+
+    header nav ul li {
+        width: 50%;
+    padding: 20px;
+    text-align: center;
+    margin: 0px;
+    border-top: none;
+    border-bottom: 2px solid var(--grey);
+    }
+
+    #filter {
+        flex-direction: column;
+    }
+
+    #hebergement {
+        flex-direction: column;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+
+    #activite {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        height: 500px;
+        width: 100%;
+    }
+
+    #activite .box-main {
+        border-radius: 20px;
+        height: 100%;
+        width: 100%;
+        margin: 3em 3em 0 0;
+    }
+
+    #activite .box-2 {
+        height: 100%;
+    }
+
+    #activite .box-3 {
+        height: 100%;
+    }
+
+    #activite .box-4 {
+        margin-left: 0;
+    }
+
+    #activite .box-5 {
+        height: 100%;
+
+    }
+
+    #activite .box-6 {
+        height: 100%;
+        margin-top: 3em;
+    }
+
+}
