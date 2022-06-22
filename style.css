@@ -4,20 +4,6 @@
     --white-blue: RGB(224, 236, 255);
 }
 
-body {
-    font-family: 'Raleway';
-    font-size: 15px;
-    height: auto;
-    margin: auto;
-    padding: 0 2em 0 2em;
-    /* Respectivement top pad, right pad, bottom pad, left pad */
-}
-
-h1 {
-    font-size: large;
-    font-weight: bold;
-}
-
 .blue {
     color: var(--blue);
 }
@@ -28,6 +14,57 @@ h1 {
 
 .grey {
     color: var(--grey);
+}
+
+body {
+    font-family: 'Raleway';
+    margin: 0;
+    padding: 0px 50px;
+    font-size: 18px;
+}
+
+h1 {
+    font-size: 150%;
+    font-weight: bold;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1px;
+}
+
+header #logo {
+    padding: 1em 0 1em 4em;
+}
+
+header #logo img {
+    width: 150px;
+}
+
+header nav ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+}
+
+header nav ul li {
+    padding: 50px 25px;
+    border-top: 4px solid transparent;
+    margin: 0px 20px 0px 20px;
+}
+
+header nav ul li:hover {
+    border-color: var(--blue);
+}
+
+header nav ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+header nav ul li:hover a {
+    color: var(--blue);
 }
 
 .card {
@@ -42,54 +79,13 @@ h1 {
 }
 
 
-header {
-    /* Dans ce flex il y'a 2 boîtes*/
-    display: flex;
-    justify-content: space-between;
-}
-
-header .logo {
-    padding: 1em 0px;
-}
-
-header .logo img {
-    width: 150px;
-}
-
-header nav ul {
-    display: flex;
-    list-style-type: none;
-    margin: 0;
-}
-
-header nav ul li {
-    padding: 2em 1em;
-    border-top: 2px solid transparent;
-    /* Laisse une ligne transparent en haut de la boite afin de laisser transparaitre la ligne bleu*/
-    margin: 0 1em 0 1em;
-}
-
-header nav ul li a {
-    color: black;
-    text-decoration: none;
-}
-
-header nav ul li:hover {
-    border-color: var(--blue);
-}
-
-
-header nav ul li:hover a {
-    color: var(--blue);
-}
-
 /* La partie research de la page */
 
 #research {
     display: flex;
     border: 1px solid var(--grey);
     border-radius: 10px;
-    width: 300px;
+    width: 350px;
     height: 50px;
 }
 
@@ -111,7 +107,7 @@ header nav ul li:hover a {
 
 #pin_icon_container {
     display: flex;
-    width: 50px;
+    width: 75px;
     background-color: var(--grey);
     border-radius: 10px 0 0 10px;
     justify-content: center;
@@ -124,10 +120,10 @@ header nav ul li:hover a {
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
-    margin: 2em 0 2em 0;
+    margin: 1em 0 2em 0;
 }
 
-#filter p {
+#filter p, .title-filter {
     font-weight: bold;
     font-size: large;
 }
@@ -406,36 +402,38 @@ footer .foot ul li a {
 
 /*Smartphone Iphone 8 test*/
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
     body {
-        padding: 0 1em 0 1em;
+        padding: 0 1em;
     }
 
-    h1 {
-        color: #760001;
+    h1{
+        color: red;
     }
-
-    ul {
-        margin: 0px -20px;
-        padding: 0;
-        justify-content: space-between;
-    }
-
+    
     header {
         flex-direction: column;
     }
-
+    
+    header #logo {
+        margin: auto;
+    }
+    
+    header nav ul {
+        margin: 0 -2em;
+        padding: 0;
+    }
+    
     header nav ul li {
         width: 50%;
-    padding: 20px;
-    text-align: center;
-    margin: 0px;
-    border-top: none;
-    border-bottom: 2px solid var(--grey);
+        padding: 20px;
+        text-align: center;
+        margin: 0px;
+        border-top: none;
+        border-bottom: 2px solid var(--grey);
     }
 
     #filter {
-        flex-direction: column;
     }
 
     #hebergement {
