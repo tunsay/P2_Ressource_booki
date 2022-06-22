@@ -58,7 +58,7 @@ h1{
 }
 
 .box-shadow{
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 header { /* Dans ce flex il y'a 2 boîtes*/
@@ -329,51 +329,61 @@ header nav ul li:hover a {
 
 #activite{
     display: flex;
-    justify-content: space-between;
-    height: 600px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: 500px;
+    width: 100%;
 }
 
 #activite h1{
     margin: 25px 0 5px 0;
 }
 
-#activite .list{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    width: 30%;
-}
-
-#activite .list .box{
-    border-radius: 10px;
+#activite .box-main{
+    border-radius: 20px;
     height: 100%;
-    margin: 2em 2em 0 0;
+    width: 100%;
+    margin: 3em 3em 0 0;
 }
 
-#activite .list .box:nth-child(2){
-    height: 40%;
+#activite .box-2{
+    height: 55%;
 }
 
-#activite .list .box:nth-child(3){
-    height: 50%;
+#activite .box-3{
+    height: 36%;
 }
 
-#activite .list .box:nth-child(5){
-    height: 40%;
+#activite .box-4{
+    margin-left: 3em;
 }
 
-#activite .list .box:nth-child(6){
-    height: 50%;
+#activite .box-5{
+    height: 43%;
+    
 }
 
-#activite .list .box img{
+#activite .box-6{
+    height: 48%;
+    margin-top: 3em;
+}
+
+.column-double{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+#activite  .box-main img{
     width: 100%;
     height: calc(100% - 55px);
     object-fit: cover;
     border-radius: 10px 10px 0px 0px;
 }
 
-#activite .list .box p{
+#activite  .box-main p{
     margin: 1em 0 0 1em ;
 }
 
@@ -384,7 +394,7 @@ footer { /* Dans le flex de ce footer je vais mettre 3 boîtes */
     display: flex;
     background-color: var(--grey);
     padding: 2em;
-    margin: 2em -2em;
+    margin: 5em -2em;
 }
 
 footer .foot{
