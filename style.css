@@ -19,7 +19,7 @@
 body {
     font-family: 'Raleway';
     margin: 0;
-    padding: 0px 50px;
+    padding: 0px 25px;
     font-size: 18px;
 }
 
@@ -35,11 +35,12 @@ header {
 }
 
 header #logo {
-    padding: 1em 0 1em 4em;
+    padding: 1em;
+    align-self: center;
 }
 
 header #logo img {
-    width: 150px;
+    width: 100px;
 }
 
 header nav ul {
@@ -69,8 +70,8 @@ header nav ul li:hover a {
 
 .card {
     background-color: white;
-    border-radius: 10px;
-    border: solid 3px white;
+    border-radius: 20px;
+    border: solid 5px white;
     margin: 1em 0 1em 0;
 }
 
@@ -91,6 +92,7 @@ header nav ul li:hover a {
 
 #research input {
     border: none;
+    width: 240px;
 }
 
 #research button {
@@ -107,11 +109,15 @@ header nav ul li:hover a {
 
 #pin_icon_container {
     display: flex;
-    width: 75px;
+    width: 50px;
     background-color: var(--grey);
     border-radius: 10px 0 0 10px;
     justify-content: center;
     align-items: center;
+}
+
+.display-research:before {
+    content: 'Rechercher';
 }
 
 /* La partie filtre de la page*/
@@ -123,7 +129,8 @@ header nav ul li:hover a {
     margin: 1em 0 2em 0;
 }
 
-#filter p, .title-filter {
+#filter p,
+.title-filter {
     font-weight: bold;
     font-size: large;
 }
@@ -187,17 +194,21 @@ header nav ul li:hover a {
     justify-content: space-between;
 }
 
-#hebergement section h1 {
-    margin-top: 1em;
+#hebergement section h1, #hebergement section p, .notation {
+    margin-top: 5px;
 }
 
+/*##################################SECTION*/
+
 .marseille {
-    width: 100%;
+    width: 150%;
 }
 
 .populaires {
-    width: 45%;
+    width: auto;
 }
+
+/*####################################SECTION*/
 
 
 #hebergement section #marseille_container {
@@ -226,11 +237,11 @@ header nav ul li:hover a {
     display: flex;
     flex-direction: column;
     width: 30%;
-    height: 250px;
+    height: 200px;
 }
 
 #marseille_container .hebergement-list .result img {
-    border-radius: 10px 10px 0 0;
+    border-radius: 20px 20px 0 0;
     margin: 0 0 5px 0;
     height: 60%;
 }
@@ -240,6 +251,10 @@ header nav ul li:hover a {
     margin: 2px 0 2px 0;
     padding-left: 10px;
     font-size: 16px;
+}
+
+.notation {
+    font-size: 12px;
 }
 
 #marseille_container .hebergement-list .result .notation {
@@ -256,14 +271,15 @@ header nav ul li:hover a {
     margin-right: 0;
 }
 
-#populaire_container {
+#hebergement section #populaire_container {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-items: baseline;
     background-color: var(--grey);
     padding: 2em;
-    height: calc(100% - 90px);
+    height: calc(100% - 108px);
+    width: 80%;
     margin: 1em 0 1em 2em;
     border-radius: 15px;
 }
@@ -280,13 +296,14 @@ header nav ul li:hover a {
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: 150px;
+    height: 137px;
 }
 
 #populaire_container .hebergement-list .result img {
-    border-radius: 10px 0 0 10px;
+    border-radius: 20px 0 0 20px;
     margin: 0 0 5px 0;
     height: 100%;
+    width: 40%;
 }
 
 
@@ -367,14 +384,14 @@ header nav ul li:hover a {
 /*le bas de la page */
 
 footer {
-    background-color: var(--grey);
-    margin: 0px -50px;
-    padding: 50px;
     display: flex;
+    background-color: var(--grey);
+    padding: 50px 75px;
+    margin: 0 -25px;
 }
 
 footer .foot {
-    width: 33%;
+    width: 30%;
 }
 
 footer .foot ul {
@@ -388,14 +405,44 @@ footer .foot ul li a {
     line-height: 30px;
 }
 
+
+
+
 /*Tablette ipad Air*/
 @media screen and (max-width: 1000px) {
     h1 {
         color: #120076;
     }
 
+    #filter {
+        flex-wrap: wrap;
+    }
+
+    #hebergement {
+        flex-direction: column-reverse;
+    }
+
+    #hebergement .marseille,
+    #hebergement .populaire {
+        width: 100%;
+    }
+
+    #hebergement section #populaire_container{
+        margin: 0;
+        width: auto;
+    }
+
+    #activite{
+        display: none;
+    }
+
+
     footer {
-        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    footer .column {
+        width: auto;
     }
 
 }
@@ -407,23 +454,27 @@ footer .foot ul li a {
         padding: 0 1em;
     }
 
-    h1{
-        color: red;
+    h1 {
+        font-weight: bold;
+        font-size: 23px;
     }
-    
+
     header {
         flex-direction: column;
     }
-    
+
     header #logo {
-        margin: auto;
+        margin: 0;
+        padding: 1em;
+        display: flex;
+        justify-content: center;
     }
-    
+
     header nav ul {
-        margin: 0 -2em;
+        margin: 0;
         padding: 0;
     }
-    
+
     header nav ul li {
         width: 50%;
         padding: 20px;
@@ -434,15 +485,84 @@ footer .foot ul li a {
     }
 
     #filter {
+        flex-direction: column;
+        align-items: flex-start;
     }
+
+    #filter .category {
+        margin: 5px 0;
+    }
+
+    #research {
+        width: 344px;
+    }
+
+    #research button {
+        width: 50px;
+        border-radius: 10px;
+    }
+
+    .display-research:before {
+        display: none;
+    }
+
+    .display-research:after {
+        font-family: 'FontAwesome';
+        content: "\f002";
+    }
+
 
     #hebergement {
+        flex-direction: column-reverse;
+    }
+
+    .marseille {
+        width: 100%;
+    }
+
+    .populaires {
+    }
+
+
+    #hebergement section #marseille_container {
+        background-color: white;
+        padding: 1em 0;
+    }
+
+    #marseille_container .hebergement-list {
         flex-direction: column;
     }
 
-    footer {
-        flex-direction: column;
+    #marseille_container .hebergement-list .result {
+        width: auto;
     }
+
+    #hebergement section #populaire_container {
+        padding: 1em 18px;
+        margin: 0px -18px;
+        border-radius: 0;
+    }
+
+    #populaire_container .hebergement-list .result {
+    }
+
+    
+
+
+
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        padding: 50px 18px;
+        margin: 0 -18px
+    }
+
+    footer .foot {
+        width: 100%;
+    }
+    
+
 
     #activite {
         flex-direction: column;
