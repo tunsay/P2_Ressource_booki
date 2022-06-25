@@ -192,7 +192,7 @@ header nav ul li:hover a {
 }
 
 .display-more p{
-    font-size: 18px;
+    font-size: 15px;
     font-weight: bold;
 }
 
@@ -212,7 +212,6 @@ header nav ul li:hover a {
 .card {
     background-color: white;
     border-radius: 20px;
-    border: solid 5px white;
     margin: 1em 0 1em 0;
 }
 
@@ -250,6 +249,7 @@ header nav ul li:hover a {
 #marseille_container .hebergement-list .result {
     display: flex;
     flex-direction: column;
+    border: solid 5px white;
     width: 30%;
     height: 200px;
 }
@@ -309,6 +309,7 @@ header nav ul li:hover a {
 #populaire_container .hebergement-list .result {
     display: flex;
     flex-direction: row;
+    border: solid 5px white;
     width: 100%;
     height: 148px;
 }
@@ -337,53 +338,51 @@ header nav ul li:hover a {
 
 #activite {
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    height: 500px;
-    width: 100%;
-    margin-bottom: 100px;
+    justify-content: space-between;
+    margin:0 -25px;
 }
 
-#activite h1 {
-    margin: 25px 0 5px 0;
-}
 
 #activite .box-main {
-    border-radius: 20px;
-    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 100%;
-    margin: 3em 3em 0 0;
-}
-
-#activite .box-2 {
-    height: 55%;
-}
-
-#activite .box-3 {
-    height: 36%;
-}
-
-#activite .box-4 {
-    margin-left: 3em;
-}
-
-#activite .box-5 {
-    height: 43%;
-
-}
-
-#activite .box-6 {
-    height: 48%;
-    margin-top: 3em;
+    height: 440px;
+    margin:20px;
 }
 
 .column-double {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    flex-wrap: nowrap;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    align-content: space-between;
+}
+
+ #activite .box-2 {
+    height:calc(400px - 150px);
     width: 100%;
 }
+
+#activite .box-3 {
+    height:calc(400px - 250px);
+    width: 100%;
+}
+
+#activite .box-4 {
+}
+
+#activite .box-5 {
+    height:calc(400px - 200px);
+    width: 100%;
+}
+
+#activite .box-6 {
+    height:calc(400px - 200px);
+    width: 100%;
+}
+
 
 #activite .box-main img {
     width: 100%;
@@ -393,7 +392,9 @@ header nav ul li:hover a {
 }
 
 #activite .box-main p {
-    margin: 1em 0 0 1em;
+    margin-left: 1em;
+    font-size: 16px;
+    font-weight: bold;
 }
 
 
@@ -404,6 +405,7 @@ footer {
     background-color: var(--grey);
     padding: 50px 75px;
     margin: 0 -25px;
+    margin-top: 50px;
 }
 
 footer .foot {
@@ -455,7 +457,6 @@ footer .foot ul li a {
     }
 
     #activite{
-        display: none;
     }
 
 
@@ -501,7 +502,7 @@ footer .foot ul li a {
         width: 50%;
         padding: 20px;
         text-align: center;
-        margin: 0px -18px;
+        margin: 0px -15px;
         border-top: none;
         border-bottom: 2px solid var(--grey);
     }
@@ -555,50 +556,33 @@ footer .foot ul li a {
 
     #marseille_container .hebergement-list .result {
         width: auto;
+        margin: 5px 0;
     }
 
     #hebergement section #populaire_container {
-        padding: 1em 18px;
-        margin: 0px -18px;
+        padding: 1em 15px;
+        margin: 0px -15px;
         border-radius: 0;
     }
 
     #populaire_container .hebergement-list .result {
+        margin: 5px 0;
     }
-
-    
-
-
-
-
-    footer {
-        display: flex;
-        flex-direction: column;
-        padding: 50px 18px;
-        margin: 0 -18px
-    }
-
-    footer .foot {
-        width: 100%;
-    }
-    
-
 
     #activite {
+        display: flex;
         flex-direction: column;
-        flex-wrap: nowrap;
-        height: 500px;
-        width: 100%;
+        margin: 0;
     }
 
-    #activite .box-main {
-        border-radius: 20px;
-        height: 100%;
+    #activite .box-main, .box-2, .box-3, .box-5, .box-6 {
         width: 100%;
-        margin: 3em 3em 0 0;
+        height: 200px;
+        margin: 15px 0;
     }
 
-    #activite .box-2 {
+
+    /*#activite .box-2 {
         height: 100%;
     }
 
@@ -618,6 +602,25 @@ footer .foot ul li a {
     #activite .box-6 {
         height: 100%;
         margin-top: 3em;
+    }*/
+
+
+
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        padding: 50px 15px;
+        margin: 0 -15px;
+        margin-top: 50px;
     }
+
+    footer .foot {
+        width: 100%;
+    }
+    
+
+
+    
 
 }
