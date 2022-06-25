@@ -17,15 +17,14 @@
 }
 
 body {
-    font-family: 'Raleway';
+    font-family: 'Raleway', sans-serif;
     margin: 0;
     padding: 0px 25px;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 h1 {
     font-size: 150%;
-    font-weight: bold;
 }
 
 header {
@@ -50,9 +49,8 @@ header nav ul {
 }
 
 header nav ul li {
-    padding: 50px 25px;
+    padding: 50px;
     border-top: 4px solid transparent;
-    margin: 0px 20px 0px 20px;
 }
 
 header nav ul li:hover {
@@ -68,25 +66,14 @@ header nav ul li:hover a {
     color: var(--blue);
 }
 
-.card {
-    background-color: white;
-    border-radius: 20px;
-    border: solid 5px white;
-    margin: 1em 0 1em 0;
-}
-
-.box-shadow {
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-}
-
 
 /* La partie research de la page */
 
 #research {
     display: flex;
     border: 1px solid var(--grey);
-    border-radius: 10px;
-    width: 350px;
+    border-radius: 20px;
+    width: 333px;
     height: 50px;
 }
 
@@ -96,9 +83,10 @@ header nav ul li:hover a {
 }
 
 #research button {
-    border-radius: 0 10px 10px 0;
+    border-radius: 0 20px 20px 0;
     border: none;
     background-color: var(--blue);
+    width: 135px;
 }
 
 #research button p {
@@ -111,7 +99,7 @@ header nav ul li:hover a {
     display: flex;
     width: 50px;
     background-color: var(--grey);
-    border-radius: 10px 0 0 10px;
+    border-radius: 20px 0 0 20px;
     justify-content: center;
     align-items: center;
 }
@@ -192,10 +180,20 @@ header nav ul li:hover a {
 #hebergement {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
 }
 
 #hebergement section h1, #hebergement section p, .notation {
-    margin-top: 5px;
+    margin: 5px 0 0 0;
+}
+
+.display-more{
+    margin: 20px 0 20px 0;
+}
+
+.display-more p{
+    font-size: 18px;
+    font-weight: bold;
 }
 
 /*##################################SECTION*/
@@ -206,18 +204,34 @@ header nav ul li:hover a {
 
 .populaires {
     width: auto;
+    margin-left: 50px;
 }
 
 /*####################################SECTION*/
 
+.card {
+    background-color: white;
+    border-radius: 20px;
+    border: solid 5px white;
+    margin: 1em 0 1em 0;
+}
+
+/* Enlève le margin-bottom de la 3 carte de la section .populaires*/
+.populaires .card:nth-child(3){
+    margin-bottom: 0;
+}
+
+.box-shadow {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
 
 #hebergement section #marseille_container {
     display: flex;
     flex-direction: column;
     background-color: var(--grey);
     padding: 2em;
-    margin: 1em 0 1em 0;
-    border-radius: 15px;
+    margin: 0;
+    border-radius: 20px;
 }
 
 .hebergement-list {
@@ -244,6 +258,8 @@ header nav ul li:hover a {
     border-radius: 20px 20px 0 0;
     margin: 0 0 5px 0;
     height: 60%;
+    width: 100%;
+    object-fit: cover;
 }
 
 .hebergement-list .result p,
@@ -278,10 +294,8 @@ header nav ul li:hover a {
     align-items: baseline;
     background-color: var(--grey);
     padding: 2em;
-    height: calc(100% - 108px);
-    width: 80%;
-    margin: 1em 0 1em 2em;
-    border-radius: 15px;
+    width: calc(100% - 65px);
+    border-radius: 20px;
 }
 
 .title-icon {
@@ -296,7 +310,7 @@ header nav ul li:hover a {
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: 137px;
+    height: 148px;
 }
 
 #populaire_container .hebergement-list .result img {
@@ -304,6 +318,7 @@ header nav ul li:hover a {
     margin: 0 0 5px 0;
     height: 100%;
     width: 40%;
+    object-fit: cover;
 }
 
 
@@ -311,6 +326,7 @@ header nav ul li:hover a {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding: 10px;
 }
 
 #populaire_container .hebergement-list .result .info .notation {
@@ -410,13 +426,19 @@ footer .foot ul li a {
 
 /*Tablette ipad Air*/
 @media screen and (max-width: 1000px) {
-    h1 {
-        color: #120076;
-    }
 
     #filter {
         flex-wrap: wrap;
     }
+
+    .marseille{
+        margin-top: 20px;
+    }
+    
+    .populaires {
+        margin-left: 0;
+    }
+
 
     #hebergement {
         flex-direction: column-reverse;
@@ -479,7 +501,7 @@ footer .foot ul li a {
         width: 50%;
         padding: 20px;
         text-align: center;
-        margin: 0px;
+        margin: 0px -18px;
         border-top: none;
         border-bottom: 2px solid var(--grey);
     }
@@ -520,8 +542,6 @@ footer .foot ul li a {
         width: 100%;
     }
 
-    .populaires {
-    }
 
 
     #hebergement section #marseille_container {

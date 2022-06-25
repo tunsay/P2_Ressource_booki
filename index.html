@@ -7,7 +7,9 @@
    <title>Projet 2 openclassrrom</title>
    <link rel="stylesheet" type="text/css" href="node_modules/normalize.css/normalize.css">
    <link rel="stylesheet" type="text/css" href="style.css">
-   <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'> <!--Importe le font Raleway-->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet"> <!--Importe le font Raleway-->
    <script src="https://kit.fontawesome.com/21eab10f51.js" crossorigin="anonymous"></script> <!--Importe le Font awesome pour les symboles-->
    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" />
 </head>
@@ -16,7 +18,7 @@
    <!--Header-->
    <header>
       <div id="logo">
-          <img src="images/logo/Booki.png">
+          <img src="images/logo/Booki.png" alt="">
       </div>
       <nav>
           <ul>
@@ -25,6 +27,7 @@
           </ul>
       </nav>
   </header>
+  <main>
 
    <h1>Trouvez votre hébergement pour des vavanves de rêve</h1>
    <p>En plein centre ville ou en pleine nature</p>
@@ -34,7 +37,7 @@
          <i class="fa-solid fa-location-dot"></i>
       </div>
       <input placeholder="Ex: Marseille, France" />
-      <button type="submit">
+      <button id="submit" aria-label="Rechercher" type="submit">
          <p class="display-research"></p>
       </button>
 
@@ -73,80 +76,83 @@
             <h1>Hébergements à Marseille</h1>
             <div class="hebergement-list">
                <div class="card result box-shadow">
-                  <img src="./images/hebergements/3_medium/annie-spratt-Eg1qcIitAuA-unsplash.jpg">
+                  <img src="./images/hebergements/3_medium/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="">
                   <h1>Auberge La Cannebière</h1>
-                  <p>Nuit à partir de 25€</p>
+                  <p>Nuit à partir de <strong>25€</strong></p>
                   <div class="notation">
-                     <i class="fa fa-star blue"></i>
-                     <i class="fa fa-star blue"></i>
-                     <i class="fa fa-star blue"></i>
-                     <i class="fa fa-star blue"></i>
-                     <i class="fa fa-star blue"></i>
+                     <i class="fa-solid fa-star blue"></i>
+                     <i class="fa-solid fa-star blue"></i>
+                     <i class="fa-solid fa-star blue"></i>
+                     <i class="fa-solid fa-star blue"></i>
+                     <i class="fa-solid fa-star grey"></i>
                   </div>
                </div>
 
                <div class=" card result box-shadow">
-                  <img src="./images/hebergements/3_medium/annie-spratt-Eg1qcIitAuA-unsplash.jpg">
-                  <h1>Auberge La Cannebière</h1>
-                  <p>Nuit à partir de 25€</p>
+                  <img src="./images/hebergements/3_medium/fred-kleber-gTbaxaVLvsg-unsplash.jpg" alt="">
+                  <h1>Hôtel du port</h1>
+                  <p>Nuit à partir de 52<strong>€</strong></p>
                   <div class="notation">
-                     <i class="fa fa-star blue"></i>
-                     <i class="fa fa-star blue"></i>
-                     <i class="fa fa-star blue"></i>
-                     <i class="fa fa-star blue"></i>
-                     <i class="fa fa-star blue"></i>
+                     <i class="fa-solid fa-star blue"></i>
+                     <i class="fa-solid fa-star blue"></i>
+                     <i class="fa-solid fa-star blue"></i>
+                     <i class="fa-solid fa-star blue"></i>
+                     <i class="fa-solid fa-star blue"></i>
                   </div>
                </div>
                <div class="card result box-shadow">
-                  <img src="./images/hebergements/3_medium/annie-spratt-Eg1qcIitAuA-unsplash.jpg">
+                  <img src="./images/hebergements/3_medium/reisetopia-B8WIgxA_PFU-unsplash.jpg" alt="">
                   <h1>Auberge La Cannebière</h1>
-                  <p>Nuit à partir de 25€</p>
+                  <p>Nuit à partir de 76<strong>€</strong></p>
                   <div class="notation">
-                     <i class="fa fa-star blue"></i>
-                     <i class="fa fa-star blue"></i>
-                     <i class="fa fa-star blue"></i>
-                     <i class="fa fa-star blue"></i>
-                     <i class="fa fa-star blue"></i>
+                     <i class="fa-solid fa-star blue"></i>
+                     <i class="fa-solid fa-star blue"></i>
+                     <i class="fa-solid fa-star blue"></i>
+                     <i class="fa-solid fa-star blue"></i>
+                     <i class="fa-solid fa-star grey"></i>
                   </div>
                </div>
                <div class="card result box-shadow">
-                  <img src="./images/hebergements/3_medium/annie-spratt-Eg1qcIitAuA-unsplash.jpg">
-                  <h1>Auberge La Cannebière</h1>
-                  <p>Nuit à partir de 25€</p>
+                  <img src="./images/hebergements/3_medium/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="">
+                  <h1>hôtel de la mer</h1>
+                  <p>Nuit à partir de 46<strong>€</strong></p>
                   <div class="notation">
-                     <i class="fa fa-star blue"></i>
-                     <i class="fa fa-star blue"></i>
-                     <i class="fa fa-star blue"></i>
-                     <i class="fa fa-star blue"></i>
-                     <i class="fa fa-star blue"></i>
+                     <i class="fa-solid fa-star blue"></i>
+                     <i class="fa-solid fa-star blue"></i>
+                     <i class="fa-solid fa-star blue"></i>
+                     <i class="fa-solid fa-star grey"></i>
+                     <i class="fa-solid fa-star grey"></i>
                   </div>
                </div>
                <div class="card result box-shadow">
-                  <img src="./images/hebergements/3_medium/annie-spratt-Eg1qcIitAuA-unsplash.jpg">
-                  <h1>Auberge La Cannebière</h1>
-                  <p>Nuit à partir de 25€</p>
+                  <img src="./images/hebergements/3_medium/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" alt="">
+                  <h1>Auberge Le panier</h1>
+                  <p>Nuit à partir de <strong>23€</strong></p>
                   <div class="notation">
-                     <i class="fa fa-star blue"></i>
-                     <i class="fa fa-star blue"></i>
-                     <i class="fa fa-star blue"></i>
-                     <i class="fa fa-star blue"></i>
-                     <i class="fa fa-star blue"></i>
+                     <i class="fa-solid fa-star blue"></i>
+                     <i class="fa-solid fa-star blue"></i>
+                     <i class="fa-solid fa-star blue"></i>
+                     <i class="fa-solid fa-star blue"></i>
+                     <i class="fa-solid fa-star grey"></i>
                   </div>
                </div>
                <div class="card result box-shadow">
-                  <img src="./images/hebergements/3_medium/annie-spratt-Eg1qcIitAuA-unsplash.jpg">
-                  <h1>Auberge La Cannebière</h1>
-                  <p>Nuit à partir de 25€</p>
+                  <img src="./images/hebergements/3_medium/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" alt="">
+                  <h1>Hôtel chez Amina</h1>
+                  <p>Nuit à partir de 96<strong>€</strong></p>
                   <div class="notation">
-                     <i class="fa fa-star blue"></i>
-                     <i class="fa fa-star blue"></i>
-                     <i class="fa fa-star blue"></i>
-                     <i class="fa fa-star blue"></i>
-                     <i class="fa fa-star grey"></i>
+                     <i class="fa-solid fa-star blue"></i>
+                     <i class="fa-solid fa-star blue"></i>
+                     <i class="fa-solid fa-star blue"></i>
+                     <i class="fa-solid fa-star blue"></i>
+                     <i class="fa-solid fa-star grey"></i>
                   </div>
                </div>
             </div>
-            <p>Afficher plus</p>
+            <div class="display-more">
+               <p>Afficher plus</h2>
+            </div>
+            
          </div>
       </section>
       <section class="populaires">
@@ -154,56 +160,56 @@
 
             <div class="title-icon">
                <h1>Les plus populaires</h1>
-               <div class="icon_star"><i class="fa fa-star"></i></div>
+               <div class="icon_star"><i class="fa-solid fa-star"></i></div>
             </div>
 
 
             <div class="hebergement-list">
                <div class="card result box-shadow">
-                  <img src="./images/hebergements/3_medium/annie-spratt-Eg1qcIitAuA-unsplash.jpg">
+                  <img src="./images/hebergements/3_medium/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="">
                   <div class="info">
                      <div class="title-price">
-                     <h1>Auberge La Cannebière</h1>
-                     <p>Nuit à partir de 25€</p>
+                     <h1>Hôtel Le soleil du matin</h1>
+                     <p>Nuit à partir de 128<strong>€</strong></p>
                   </div>
                      <div class="notation">
-                        <i class="fa fa-star blue"></i>
-                        <i class="fa fa-star blue"></i>
-                        <i class="fa fa-star blue"></i>
-                        <i class="fa fa-star blue"></i>
-                        <i class="fa fa-star blue"></i>
+                        <i class="fa-solid fa-star blue"></i>
+                        <i class="fa-solid fa-star blue"></i>
+                        <i class="fa-solid fa-star blue"></i>
+                        <i class="fa-solid fa-star blue"></i>
+                        <i class="fa-solid fa-star blue"></i>
                      </div>
                   </div>
                </div>
                <div class="card result box-shadow">
-                  <img src="./images/hebergements/3_medium/annie-spratt-Eg1qcIitAuA-unsplash.jpg">
+                  <img src="./images/hebergements/3_medium/aw-creative-VGs8z60yT2c-unsplash.jpg" alt="">
                   <div class="info">
                      <div class="title-price">
-                     <h1>Auberge La Cannebière</h1>
-                     <p>Nuit à partir de 25€</p>
+                     <h1>Au coeur de l'eau Chzmbres d'hôtes</h1>
+                     <p>Nuit à partir de 71<strong>€</strong></p>
                   </div>
                      <div class="notation">
-                        <i class="fa fa-star blue"></i>
-                        <i class="fa fa-star blue"></i>
-                        <i class="fa fa-star blue"></i>
-                        <i class="fa fa-star blue"></i>
-                        <i class="fa fa-star grey"></i>
+                        <i class="fa-solid fa-star blue"></i>
+                        <i class="fa-solid fa-star blue"></i>
+                        <i class="fa-solid fa-star blue"></i>
+                        <i class="fa-solid fa-star blue"></i>
+                        <i class="fa-solid fa-star grey"></i>
                      </div>
                   </div>
                </div>
                <div class=" card result box-shadow">
-                  <img src="./images/hebergements/3_medium/annie-spratt-Eg1qcIitAuA-unsplash.jpg">
+                  <img src="./images/hebergements/3_medium/febrian-zakaria-sjvU0THccQA-unsplash.jpg" alt="">
                   <div class="info">
                      <div class="title-price">
-                     <h1>Auberge La Cannebière</h1>
-                     <p>Nuit à partir de 25€</p>
+                     <h1>Hôtel Tout bleu et Blanc</h1>
+                     <p>Nuit à partir de 68<strong>€</strong></p>
                   </div>
                      <div class="notation">
-                        <i class="fa fa-star blue"></i>
-                        <i class="fa fa-star blue"></i>
-                        <i class="fa fa-star blue"></i>
-                        <i class="fa fa-star blue"></i>
-                        <i class="fa fa-star blue"></i>
+                        <i class="fa-solid fa-star blue"></i>
+                        <i class="fa-solid fa-star blue"></i>
+                        <i class="fa-solid fa-star blue"></i>
+                        <i class="fa-solid fa-star blue"></i>
+                        <i class="fa-solid fa-star grey"></i>
                      </div>
                   </div>
                </div>
@@ -215,38 +221,38 @@
    <h1>Activités à Marseille</h1>
    <div id="activite">
       <div class="box-main box-shadow">
-         <img src="./images/activites/3_medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg">
+         <img src="./images/activites/3_medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="">
          <p>La cannebière 1</p>
       </div>
       <div class="column-double">
          <div class="box-main box-2 box-shadow"><img
-               src="./images/activites/3_medium/paul-hermann-QFTrLdQIRhI-unsplash.jpg">
+               src="./images/activites/3_medium/paul-hermann-QFTrLdQIRhI-unsplash.jpg" alt="">
             <p>La cannebière 2</p>
          </div>
          <div class="box-main box-3 box-shadow"><img
-               src="./images/activites/3_medium/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg">
+               src="./images/activites/3_medium/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg" alt="">
             <p>La cannebière 3</p>
          </div>
       </div>
       <div class="box-main box-4 box-shadow"><img
-            src="./images/activites/3_medium/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg">
+            src="./images/activites/3_medium/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" alt="">
          <p>La cannebière 4</p>
       </div>
       <div class="column-double">
 
 
          <div class="box-main box-5 box-shadow"><img
-               src="./images/activites/3_medium/florian-wehde-xW9e8gdotxI-unsplash.jpg">
+               src="./images/activites/3_medium/florian-wehde-xW9e8gdotxI-unsplash.jpg" alt="">
             <p>La cannebière 5</p>
          </div>
          <div class="box-main box-6 box-shadow"><img
-               src="./images/activites/3_medium/lena-paulin-wH2-EJoDcV0-unsplash.jpg">
+               src="./images/activites/3_medium/lena-paulin-wH2-EJoDcV0-unsplash.jpg" alt="">
             <p>La cannebière 6</p>
          </div>
       </div>
    </div>
 
-
+</main>
    <footer>
       
       <div class="foot">
