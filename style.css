@@ -1,7 +1,7 @@
 :root {
-    --blue: RGB(24, 100, 252);
-    --grey: RGB(242, 242, 242);
-    --white-blue: RGB(224, 236, 255);
+    --blue: #0065FC;
+    --grey: #f2f2f2;
+    --white-blue: #DEEBFF;
     --padding-body: 50px;
 }
 
@@ -49,7 +49,7 @@ header {
 }
 
 header #logo {
-    padding: 1em;
+    padding: 15px;
     align-self: center;
 }
 
@@ -85,7 +85,7 @@ header nav ul li:hover a {
     border-radius: 20px;
     width: 40%;
     height: 50px;
-    margin: 1em 0;
+    margin: 15px 0;
 }
 
 #pin-icon-container {
@@ -100,6 +100,7 @@ header nav ul li:hover a {
 #research input {
     border: none;
     width: 80%;
+    padding: 15px;
 }
 
 #research button {
@@ -126,7 +127,7 @@ header nav ul li:hover a {
     justify-content: flex-start;
     flex-wrap: wrap;
     align-items: center;
-    margin: 2em 0;
+    margin: 30px 0;
 }
 
 #filter p,
@@ -144,6 +145,15 @@ header nav ul li:hover a {
     margin: 10px;
     padding-right: 10px;
     height: 50px;
+    transition-timing-function: ease-in-out;
+    transition-duration:0.2s ;
+}
+
+#filter .category:hover {
+    flex-direction: row-reverse;
+    background-color: var(--white-blue);
+    padding-right: 0;
+    padding-left: 10px;
 }
 
 #filter .category .round {
@@ -156,18 +166,12 @@ header nav ul li:hover a {
     background: var(--white-blue);
 }
 
-
-
-#filter .category p {
-
-}
-
 /* La partie information */
 
 #information {
     display: flex;
     align-items: flex-start;
-    margin: 2em 0;
+    margin: 30px 0;
 }
 
 #information .round {
@@ -217,7 +221,7 @@ header nav ul li:hover a {
 .card {
     background-color: white;
     border-radius: 20px;
-    margin: 1em 0 1em 0;
+    margin: 15px 0 15px 0;
 }
 
 .box-shadow {
@@ -228,7 +232,7 @@ header nav ul li:hover a {
     display: flex;
     flex-direction: column;
     background-color: var(--grey);
-    padding: 2em;
+    padding: 30px;
     margin: 0;
     border-radius: 20px;
 }
@@ -239,12 +243,15 @@ header nav ul li:hover a {
     justify-content: space-between;
 }
 
-.hebergement-list a {
-    transition: box-shadow .2s ease-in-out;
+.hebergement-list a,
+#activite a{
+    transition-timing-function: ease-in-out;
+    transition-duration: .2s;
 }
 
-.hebergement-list a:hover {
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+.hebergement-list a:hover,
+#activite a:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;;
 }
 
 .hebergement-list .result p,
@@ -284,7 +291,8 @@ header nav ul li:hover a {
 }
 
 .fa-star {
-    transition:all 0.2s ease;
+    transition-duration: .2s;
+    transition-timing-function: ease-in-out;
 }
 
 .fa-star:hover {
@@ -307,7 +315,7 @@ header nav ul li:hover a {
     flex-wrap: wrap;
     align-items: baseline;
     background-color: var(--grey);
-    padding: 2em;
+    padding: 30px;
     width: calc(100% - 65px);
     border-radius: 20px;
 }
@@ -359,7 +367,7 @@ header nav ul li:hover a {
 }
 
 .title-activity{
-    padding-top: 3em ;
+    padding-top: 50px ;
 }
 
 
@@ -420,7 +428,7 @@ la hauteur du container - (la hauteur container + margin du container * 2) * ( l
 }
 
 #activite .box-main p {
-    margin-left: 1em;
+    margin-left: 15px;
     font-size: 16px;
     font-weight: bold;
 }
@@ -446,16 +454,11 @@ footer .foot ul li a {
     line-height: 30px;
 }
 
-@keyframes fondu-enchaine {
-    100% {
-        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    }
 
-}
 
 
 /*Tablette ipad Air ###############################################*/
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 992px) {
     :root {
         --padding-body: 20px;
     }
@@ -490,7 +493,7 @@ footer .foot ul li a {
 
 /*Smartphone Iphone 8  ###############################################*/
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
     body {
         padding: 0 var(--padding-body);
     }
@@ -501,7 +504,7 @@ footer .foot ul li a {
 
     header #logo {
         margin: 0;
-        padding: 1em;
+        padding: 15px;
         display: flex;
         justify-content: center;
     }
@@ -552,7 +555,7 @@ footer .foot ul li a {
     }
 
     .title-icon{
-        padding-top: 2em;
+        padding-top: 30px;
     }
 
     #hebergement {
@@ -570,7 +573,7 @@ footer .foot ul li a {
     #hebergement section 
     #marseille-container {
         background-color: white;
-        padding: 1em 0;
+        padding: 15px 0;
     }
 
     #marseille-container .hebergement-list {
@@ -584,7 +587,7 @@ footer .foot ul li a {
 
     #hebergement section 
     #populaire-container {
-        padding: 1em var(--padding-body);
+        padding: 15px var(--padding-body);
         margin: 0px calc(var(--padding-body)*-1);
         border-radius: 0;
     }
@@ -617,8 +620,8 @@ footer .foot ul li a {
     footer {
         display: flex;
         flex-direction: column;
-        padding: 50px 15px;
-        margin: 0 -15px;
+        padding: 50px var(--padding-body);
+        margin: 0 calc(var(--padding-body) * -1);
         margin-top: 50px;
     }
 
