@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <html lang="fr">
 
 <head>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
    <meta charset=utf-8>
-   <title>Projet 2 openclassrrom</title>
-   <link rel="stylesheet" type="text/css" href="node_modules/normalize.css/normalize.css">
-   <link rel="stylesheet" type="text/css" href="style.css">
+   <link rel="stylesheet" type="text/css" href="css/normalize.css">
+   <link rel="stylesheet" type="text/css" href="css/style.css">
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800&display=swap"
@@ -15,9 +14,11 @@
    <script src="https://kit.fontawesome.com/21eab10f51.js" crossorigin="anonymous"></script>
    <!--Importe le Font awesome pour les symboles-->
    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" />
+   <title>Projet 2 openclassroom</title>
 </head>
 
 <body>
+
    <header>
       <div id="logo">
          <img src="images/logo/Booki.png" alt="">
@@ -29,9 +30,9 @@
          </ul>
       </nav>
    </header>
-   <main>
 
-      <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
+   <main>
+      <h2>Trouvez votre hébergement pour des vacances de rêve</h2>
       <p>En plein centre ville ou en pleine nature</p>
 
       <div id="research">
@@ -40,7 +41,7 @@
          </div>
          <input placeholder="Ex: Marseille, France" />
          <button id="submit" aria-label="Rechercher" type="submit">
-            <p class="display-research"></p>
+            <span class="display-research"></span>
          </button>
 
       </div>
@@ -75,12 +76,12 @@
       <div id="hebergement">
          <section class="marseille">
             <div id="marseille-container">
-               <h1>Hébergements à Marseille</h1>
+               <h2>Hébergements à Marseille</h2>
                <div class="hebergement-list">
                   <a href="#" class="card result box-shadow">
                      <img src="./images/hebergements/2_large/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="">
                      <div class="article">
-                        <h1>Auberge La Cannebière</h1>
+                        <h2>Auberge La Cannebière</h2>
                         <p>Nuit à partir de <strong>25€</strong></p>
                         <div class="notation">
                            <i class="fa-solid fa-star blue"></i>
@@ -95,7 +96,7 @@
                   <a href="#" class="card result box-shadow">
                      <img src="./images/hebergements/2_large/fred-kleber-gTbaxaVLvsg-unsplash.jpg" alt="">
                      <div class="article">
-                        <h1>Hôtel du port</h1>
+                        <h2>Hôtel du port</h2>
                         <p>Nuit à partir de 52<strong>€</strong></p>
                         <div class="notation">
                            <i class="fa-solid fa-star blue"></i>
@@ -109,7 +110,7 @@
                   <a href="#" class="card result box-shadow">
                      <img src="./images/hebergements/2_large/reisetopia-B8WIgxA_PFU-unsplash.jpg" alt="">
                      <div class="article">
-                        <h1>Auberge La Cannebière</h1>
+                        <h2>Auberge La Cannebière</h2>
                         <p>Nuit à partir de 76<strong>€</strong></p>
                         <div class="notation">
                            <i class="fa-solid fa-star blue"></i>
@@ -123,7 +124,7 @@
                   <a href="#" class="card result box-shadow">
                      <img src="./images/hebergements/2_large/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="">
                      <div class="article">
-                        <h1>Hôtel de la mer</h1>
+                        <h2>Hôtel de la mer</h2>
                         <p>Nuit à partir de 46<strong>€</strong></p>
                         <div class="notation">
                            <i class="fa-solid fa-star blue"></i>
@@ -137,7 +138,7 @@
                   <a href="#" class="card result box-shadow">
                      <img src="./images/hebergements/2_large/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" alt="">
                      <div class="article">
-                        <h1>Auberge Le panier</h1>
+                        <h2>Auberge Le panier</h2>
                         <p>Nuit à partir de <strong>23€</strong></p>
                         <div class="notation">
                            <i class="fa-solid fa-star blue"></i>
@@ -151,7 +152,7 @@
                   <a href="#" class="card result box-shadow">
                      <img src="./images/hebergements/2_large/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" alt="">
                      <div class="article">
-                        <h1>Hôtel chez Amina</h1>
+                        <h2>Hôtel chez Amina</h2>
                         <p>Nuit à partir de 96<strong>€</strong></p>
                         <div class="notation">
                            <i class="fa-solid fa-star blue"></i>
@@ -173,7 +174,7 @@
             <div id="populaire-container">
 
                <div class="title-icon">
-                  <h1>Les plus populaires</h1>
+                  <h2>Les plus populaires</h2>
                   <div class="icon_star"><i class="fa-solid fa-star font-size-grow"></i></div>
                </div>
 
@@ -184,7 +185,7 @@
                      <img src="./images/hebergements/2_large/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="">
                      <div class="article">
                         <div class="title-price">
-                           <h1>Hôtel Le soleil du matin</h1>
+                           <h2>Hôtel Le soleil du matin</h2>
                            <p>Nuit à partir de 128<strong>€</strong></p>
                         </div>
                         <div class="notation">
@@ -201,7 +202,7 @@
                      <img src="./images/hebergements/2_large/aw-creative-VGs8z60yT2c-unsplash.jpg" alt="">
                      <div class="article">
                         <div class="title-price">
-                           <h1>Au coeur de l'eau Chambres d'hôtes</h1>
+                           <h2>Au coeur de l'eau Chambres d'hôtes</h2>
                            <p>Nuit à partir de 71<strong>€</strong></p>
                         </div>
                         <div class="notation">
@@ -217,7 +218,7 @@
                      <img src="./images/hebergements/2_large/febrian-zakaria-sjvU0THccQA-unsplash.jpg" alt="">
                      <div class="article">
                         <div class="title-price">
-                           <h1>Hôtel Tout bleu et Blanc</h1>
+                           <h2>Hôtel Tout bleu et Blanc</h2>
                            <p>Nuit à partir de 68<strong>€</strong></p>
                         </div>
                         <div class="notation">
@@ -234,7 +235,7 @@
          </section>
       </div>
 
-      <h1 class="title-activity">Activités à Marseille</h1>
+      <h2 class="title-activity">Activités à Marseille</h2>
       <div id="activite">
          <a class="card box-main box-shadow">
             <img src="./images/activites/2_large/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="">
@@ -264,12 +265,13 @@
                <p>Parc Longchamp</p>
             </a>
          </div>
+      </div>
 
    </main>
    <footer>
 
       <div class="foot">
-         <h1>À propos</h1>
+         <h2>À propos</h2>
          <ul>
             <li>
                <a href="#">Fonctionnement du site</a>
@@ -283,7 +285,7 @@
          </ul>
       </div>
       <div class="foot">
-         <h1>Nos hébergements</h1>
+         <h2>Nos hébergements</h2>
          <ul>
             <li>
                <a href="#">Charte qualité</a>
@@ -294,7 +296,7 @@
          </ul>
       </div>
       <div class="foot">
-         <h1>Assistance</h1>
+         <h2>Assistance</h2>
          <ul>
             <li>
                <a href="#">Centre d'aide</a>
@@ -306,7 +308,7 @@
       </div>
 
    </footer>
-   
+
 </body>
 
 </html>
